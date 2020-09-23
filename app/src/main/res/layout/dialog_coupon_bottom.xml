@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_total"
+    android:paddingBottom="10dp">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_15"
+        android:text="优惠券"
+        android:textColor="#333333"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
+        android:paddingTop="15dp"
+        android:visibility="invisible"
+        android:paddingRight="15dp"
+       />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rcy_coupon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/button"
+        android:layout_below="@id/tv_title"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center"
+        android:text="确定"
+        android:background="@drawable/bg_darkgreen_4"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:visibility="invisible"
+        android:id="@+id/img_cover"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:src="#80ffffff" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_empty_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="暂无可用优惠券"
+        android:textColor="#888888"
+        android:textSize="15sp"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

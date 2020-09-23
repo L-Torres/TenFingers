@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    >
+    <include layout="@layout/actionbar_total"/>
+    <TextView
+        android:id="@+id/tv_rule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:lineSpacingExtra="@dimen/dp_5"
+        android:text="会员规则: \n十指间平台目前有6个会员等级, 不同等级的会员在十指间平台可以享受对应的折扣优惠\n积分达到 0 成为 VIP1 可以享受 100 折\n积分达到 5000 成为 VIP2 可以享受 95 折\n积分达到 10000 成为 VIP3 可以享受 80 折\n积分达到 15000 成为 VIP4 可以享受 70 折\n积分达到 20000 成为 VIP5 可以享受 60 折\n积分达到 30000 成为 VIP6 可以享受 50 折\n1. 充值, 增加积分, 1元 = 1积分, 使用充值后的余额消费, 不增加积分\n2. 使用微信支付, 支付宝支付进行消费时, 增加积分, 1元 = 1积分\n"
+        android:textColor="@color/txt_black"
+        android:textSize="15sp"/>
+</LinearLayout>

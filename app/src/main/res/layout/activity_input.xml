@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_total"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/actionbar_total" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+       <com.beijing.tenfingers.view.ClearEditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginLeft="15dp"
+           android:textCursorDrawable="@drawable/color_cursor"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="15dp"
+            android:background="@null"
+            android:backgroundTint="@color/white"
+            android:hint=""
+            android:maxLength="20"
+            android:paddingBottom="15dp"
+            android:singleLine="true"
+            android:textColor="@color/txt_black"
+            android:textColorHint="@color/hint_tip_grey"
+            android:textSize="@dimen/textsize_8" />
+
+    </FrameLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.beijing.tenfingers.swipereveallayout.SwipeRevealLayout
+        android:id="@+id/swipe_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        app:dragEdge="right"
+        app:mode="same_level">
+
+        <LinearLayout
+            android:id="@+id/delete_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+            <View
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:background="@color/bg_total"/>
+            <TextView
+                android:id="@+id/tv_read"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="标记已读"
+                android:textColor="#ff006f55"
+                android:textSize="14sp"
+                 />
+            <View
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:background="@color/bg_total"/>
+            <TextView
+                android:id="@+id/tv_del"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="删除"
+                android:textColor="#ff006f55"
+                android:textSize="14sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="订单消息"
+                    android:textColor="#ff000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="1dp"/>
+                <View
+
+                    android:id="@+id/v_red"
+                    android:layout_width="6dp"
+                    android:layout_height="6dp"
+                    android:layout_marginTop="2.5dp"
+                    android:layout_marginLeft="1dp"
+                    android:background="@drawable/bg_oval_red"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="您有一条新的订单评论，客户在订单号20200218001“能量复原”项目中评论：服务很棒，值得点赞......"
+                android:textColor="#ff808080"
+                android:textSize="12sp"
+                />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2020-02-18  15:20"
+                android:layout_marginTop="5dp"
+                android:textColor="#ff808080"
+                android:textSize="10sp"
+                android:layout_gravity="bottom"
+                />
+
+        </LinearLayout>
+
+
+    </com.beijing.tenfingers.swipereveallayout.SwipeRevealLayout>
+
+    <ImageView
+        android:id="@+id/view_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:src="@color/bg_total" />
+
+</LinearLayout>

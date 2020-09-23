@@ -1,0 +1,160 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.mob.sdk'
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.beijing.tenfingers"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 101
+        versionName "1.0.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [
+                GETUI_APP_ID    : "NP27QCFs0O7EtwxvM7UrY6",
+                GETUI_APP_KEY   : "3h7u4Vivuu8VmnsWU7T954",
+                GETUI_APP_SECRET: "Wg4LWslXoJ7oumb7Y506W8",
+        ]
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86"
+        }
+        flavorDimensions "versionCode"
+    }
+    dexOptions {
+        javaMaxHeapSize "6g"
+        incremental true
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    signingConfigs {
+        myConfig {
+            storeFile file("shizhijian.jks")
+            storePassword "123456Aa"
+            keyAlias "key0"
+            keyPassword "123456Aa"
+        }
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.myConfig
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+
+    //添加如下配置
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+}
+MobSDK {
+    appKey "300d7d121e46c"
+    appSecret "0464c927bb13575358e93caf8295381c"
+    ShareSDK {
+//        loopShare true
+        devInfo {
+            Wechat {
+                appId "wx3f43c7eaec6bb9be"
+                appSecret "ea0583bfa9a04cb67e8a3578cec5bb27"
+                BypassApproval false
+            }
+            WechatMoments {
+                appId "wx3f43c7eaec6bb9be"
+                appSecret "ea0583bfa9a04cb67e8a3578cec5bb27"
+                BypassApproval false
+            }
+            QQ {
+                appId "1109920889"
+                appKey "6is91OCdkODOKl1r"
+                shareByAppClient true
+            }
+            QZone {
+                appId "1109920889"
+                appKey "6is91OCdkODOKl1r"
+                shareByAppClient true
+            }
+        }
+    }
+}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    // 支付宝 SDK AAR 包所需的配置
+    compile(name: 'alipaySdk-15.7.4-20200228192259', ext: 'aar')
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    //noinspection GradleCompatible
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.android.support:multidex:1.0.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:27.0.2'
+    //第三方刷新控件 主要使用xRecyclerView
+    implementation project(path: ':xrecyclerview')
+    //基于httpclient网络请求工具
+    implementation project(path: ':hm_framework_source')
+
+    // 状态栏沉浸：https://github.com/gyf-dev/ImmersionBar
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+    implementation 'com.github.chrisbanes:PhotoView:2.0.0'
+    //用来处理广播的第三方库
+    implementation 'de.greenrobot:eventbus:2.4.0'
+    //引入butterknife工具
+    implementation 'com.jakewharton:butterknife:8.5.1'
+
+    //noinspection GradleCompatible
+    implementation 'com.android.support:cardview-v7:28.0.0'
+
+    //状态栏处理工具
+    implementation 'com.jaeger.statusbarutil:library:1.5.1'
+
+    //时间选择器
+    implementation project(path: ':pickerview')
+    //图片加载
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
+
+    //recycler-----HELPER
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+
+    //gson
+    implementation 'com.google.code.gson:gson:2.8.5'
+    //rxJava3.x (如果你集成的其他开源框架已经引用rxJava2.x或rxJava3.x，则不需要再次引用)
+    implementation 'io.reactivex.rxjava3:rxjava:3.0.0-RC3'
+    implementation 'com.contrarywind:Android-PickerView:3.2.4'
+    //个推
+    implementation 'com.getui:sdk:2.13.3.0'
+
+    implementation 'com.google.zxing:core:3.2.1'
+    implementation 'cn.bingoogolapple:bga-qrcodecore:1.1.7@aar'
+    implementation 'cn.bingoogolapple:bga-zxing:1.1.7@aar'
+    implementation project(path: ':jcvideoplayer-lib')
+    //微信直播插件
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+    //移动安全联盟MSA sdk依赖
+    implementation files('libs/miit_mdid_1.0.9.aar')
+    implementation 'com.android.support:recyclerview-v7:27.0.2'
+
+    implementation project(':flowlayout')
+    implementation project(':MPChartLib')
+
+}

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/green_55"
+    android:layout_height="50dp">
+
+    <ImageView
+        android:id="@+id/title_btn_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="left|center_vertical"
+        android:background="@color/transparent"
+        android:contentDescription="@string/contentdescription"
+        android:padding="15dp"
+        android:src="@mipmap/back_white"/>
+
+    <TextView
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="搜索" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@id/button"
+        android:layout_toRightOf="@+id/title_btn_left"
+        android:background="@drawable/bg_title_search_gray">
+
+        <ImageView
+            android:id="@+id/img_title_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:contentDescription="@string/contentdescription"
+            android:src="@mipmap/icon_search" />
+
+        <ImageView
+            android:id="@+id/img_title_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:contentDescription="@string/contentdescription"
+            android:src="@mipmap/icon_cha" />
+
+        <EditText
+            android:id="@+id/edit_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/img_title_clear"
+            android:layout_toRightOf="@+id/img_title_search"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:hint="@string/hint_map_search"
+            android:textColor="@color/cl_21201e"
+            android:textColorHint="@color/cl_959595"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

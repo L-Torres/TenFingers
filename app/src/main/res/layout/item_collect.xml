@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/ll_all"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dp_15"
+        >
+        <com.hemaapp.hm_FrameWork.view.RoundedImageView
+            android:id="@+id/iv_head"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/head_pic"
+            android:scaleType="centerCrop"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="莉莉安"
+                    android:textColor="#ff000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    />
+                <ImageView
+                    android:id="@+id/iv_king"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:src="@mipmap/icon_king"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tv_e_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lily Ann"
+                android:textColor="#ff808080"
+                android:layout_marginTop="3dp"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_hot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="31,879"
+            android:textColor="#ff333333"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_fire"
+            android:layout_marginLeft="5dp"/>
+        <ImageView
+            android:id="@+id/iv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_yellow_p_small"
+            android:padding="5dp"
+            android:layout_marginLeft="20dp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#FFCCCCCC"/>
+
+
+</LinearLayout>
