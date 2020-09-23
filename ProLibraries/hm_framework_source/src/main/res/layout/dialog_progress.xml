@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    app:cardBackgroundColor="#dc000000"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="0px"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:minWidth="110dp"
+        android:minHeight="110dp"
+        android:background="@color/transparent"
+        android:orientation="vertical"
+        android:padding="10dp">
+  <com.hemaapp.hm_FrameWork.view.ProgressView
+        android:id="@+id/pw_progress"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:barColor="@android:color/white"
+        app:barWidth="2dp"
+        app:fillRadius="false"
+        app:linearProgress="true"
+        app:progressIndeterminate="true" />
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:paddingTop="10dp"
+        android:text="请稍后..."
+        android:textSize="@dimen/textsize_7" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

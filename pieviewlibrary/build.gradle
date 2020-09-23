@@ -1,0 +1,46 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven'//添加
+apply plugin: 'com.novoda.bintray-release'//添加
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 24
+        versionCode 1
+        versionName "2.0.3"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    testCompile 'junit:junit:4.12'
+}
+
+//添加
+publish {
+    //com.zhijieeeeee:pieviewlibrary:2.0.3
+    userOrg = 'zhijieeeeee'//bintray.com用户名
+    groupId = 'com.zhijieeeeee'//jcenter上的路径
+    artifactId = 'pieviewlibrary'//项目名称
+    publishVersion = '2.0.3'//版本号
+    desc = 'PieView for Android'//描述，不重要
+    website = 'https://github.com/zhijieeeeee/PieView'//网站，不重要；尽量模拟github上的地址
+
+    //gradlew clean build bintrayUpload -PbintrayUser=zhijieeeeee -PbintrayKey=xxxxxxx -PdryRun=false
+}

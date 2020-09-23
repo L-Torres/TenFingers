@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 自定义数字进度条 -->
+    <declare-styleable name="NumberProgressBar">
+        <attr name="pb_progress" format="integer"/>
+        <attr name="pb_maxProgress" format="integer"/>
+
+        <attr name="pb_textSize" format="dimension"/>
+        <attr name="pb_textColor" format="color"/>
+
+        <attr name="pb_textOffset" format="dimension"/>
+
+        <attr name="pb_unreachedColor" format="color"/>
+        <attr name="pb_reachedColor" format="color"/>
+
+        <attr name="pb_reachedHeight" format="dimension"/>
+        <attr name="pb_unreachedHeight" format="dimension"/>
+
+    </declare-styleable>
+
+    <!-- 滚动列表 -->
+    <declare-styleable name="LoopView">
+        <attr name="lv_lineColor" format="color"/>
+        <attr name="lv_topBottomTextColor" format="color"/>
+        <attr name="lv_centerTextColor" format="color"/>
+        <attr name="lv_textSize" format="dimension"/>
+        <attr name="lv_canLoop" format="boolean"/>
+        <attr name="lv_initPosition" format="integer"/>
+        <attr name="lv_drawItemCount" format="integer"/>
+    </declare-styleable>
+
+    <!-- 进度条 -->
+    <declare-styleable name="ProgressView">
+        <attr name="progressIndeterminate" format="boolean" />
+        <attr name="barColor" format="color" />
+        <attr name="rimColor" format="color" />
+        <attr name="rimWidth" format="dimension" />
+        <attr name="spinSpeed" format="float" />
+        <attr name="barSpinCycleTime" format="integer" />
+        <attr name="circleRadius" format="dimension" />
+        <attr name="fillRadius" format="boolean" />
+        <attr name="barWidth" format="dimension" />
+        <attr name="linearProgress" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="ViewHelper" tools:ignore="MissingDefaultResource">
+        <attr name="vh_isAreaClick" format="boolean" />                                     <!--是否区域内可点击，默认 false-->
+        <attr name="vh_isAreaPadding" format="boolean" />                                   <!--是否区域包含padding值，默认 true-->
+        <attr name="vh_isDropdownClose" format="boolean" />                                 <!-- 是否开启滑动关闭，ViewGroup中使用，默认 false -->
+
+        <!--圆形、圆角-->
+        <attr name="vh_isCircle" format="boolean" />                                        <!--是否是圆形-->
+        <attr name="vh_cornersRadius" format="dimension" />                                 <!--四周圆角角度-->
+        <attr name="vh_cornersRadiusTopLeft" format="dimension" />                          <!--四周圆角角度 左上-->
+        <attr name="vh_cornersRadiusTopRight" format="dimension" />                         <!--四周圆角角度 右上-->
+        <attr name="vh_cornersRadiusBottomLeft" format="dimension" />                       <!--四周圆角角度 左下-->
+        <attr name="vh_cornersRadiusBottomRight" format="dimension" />                      <!--四周圆角角度 右下-->
+
+        <!--文本颜色-->
+        <attr name="vh_textColor" format="color" />
+        <attr name="vh_textColorNormal" format="color" />
+        <attr name="vh_textColorPressed" format="color" />
+        <attr name="vh_textColorUnable" format="color" />
+        <attr name="vh_textColorChecked" format="color" />
+
+        <!--前景-->
+        <attr name="vh_prospectColor" format="color" />                                     <!--前景颜色-->
+        <attr name="vh_prospectColorNormal" format="color" />
+        <attr name="vh_prospectColorPressed" format="color" />
+        <attr name="vh_prospectColorChecked" format="color" />
+        <attr name="vh_prospectColorUnable" format="color" />
+
+        <attr name="vh_prospectDrawable" format="reference" />                              <!--前景图片-->
+        <attr name="vh_prospectDrawableNormal" format="reference" />
+        <attr name="vh_prospectDrawablePressed" format="reference" />
+        <attr name="vh_prospectDrawableChecked" format="reference" />
+        <attr name="vh_prospectDrawableUnable" format="reference" />
+
+        <!--背景-->
+        <attr name="vh_backgroundColor" format="color" />                                   <!--背景颜色 会被系统背景覆盖-->
+        <attr name="vh_backgroundColorNormal" format="color" />
+        <attr name="vh_backgroundColorPressed" format="color" />
+        <attr name="vh_backgroundColorChecked" format="color" />
+        <attr name="vh_backgroundColorUnable" format="color" />
+
+        <attr name="vh_backgroundDrawable" format="reference" />                            <!--背景图片 会被系统背景覆盖-->
+        <attr name="vh_backgroundDrawableNormal" format="reference" />
+        <attr name="vh_backgroundDrawablePressed" format="reference" />
+        <attr name="vh_backgroundDrawableChecked" format="reference" />
+        <attr name="vh_backgroundDrawableUnable" format="reference" />
+
+        <!--边框-->
+        <attr name="vh_borderColor" format="color" />                                       <!--边框颜色-->
+        <attr name="vh_borderColorNormal" format="color" />
+        <attr name="vh_borderColorPressed" format="color" />
+        <attr name="vh_borderColorChecked" format="color" />
+        <attr name="vh_borderColorUnable" format="color" />
+
+        <attr name="vh_borderWidth" format="dimension" />                                   <!--边框宽度-->
+        <attr name="vh_borderWidthNormal" format="dimension" />
+        <attr name="vh_borderWidthPressed" format="dimension" />
+        <attr name="vh_borderWidthChecked" format="dimension" />
+        <attr name="vh_borderWidthUnable" format="dimension" />
+
+        <attr name="vh_borderDashArray" format="reference" />                               <!--虚线间距数组，最少两个-->
+        <attr name="vh_borderDashWidth" format="dimension" />                               <!--虚线边框宽度-->
+        <attr name="vh_borderDashGap" format="dimension" />                                 <!--虚线边框间隔-->
+
+        <!--颜色渐变 Gradient 相关，在背景色绘制之后-->
+        <attr name="vh_gradientColorStart" format="color" />                                <!--渐变颜色开始-->
+        <attr name="vh_gradientColorStartNormal" format="color" />
+        <attr name="vh_gradientColorStartPressed" format="color" />
+        <attr name="vh_gradientColorStartChecked" format="color" />
+        <attr name="vh_gradientColorStartUnable" format="color" />
+        <attr name="vh_gradientColorCenter" format="color" />                               <!--渐变颜色中间-->
+        <attr name="vh_gradientColorCenterNormal" format="color" />
+        <attr name="vh_gradientColorCenterPressed" format="color" />
+        <attr name="vh_gradientColorCenterChecked" format="color" />
+        <attr name="vh_gradientColorCenterUnable" format="color" />
+        <attr name="vh_gradientColorEnd" format="color" />                                  <!--渐变颜色结束-->
+        <attr name="vh_gradientColorEndNormal" format="color" />
+        <attr name="vh_gradientColorEndPressed" format="color" />
+        <attr name="vh_gradientColorEndChecked" format="color" />
+        <attr name="vh_gradientColorEndUnable" format="color" />
+
+        <attr name="vh_gradientColorArray" format="reference" />                            <!--渐变颜色数组，最少两个-->
+        <attr name="vh_gradientColorArrayNormal" format="reference" />
+        <attr name="vh_gradientColorArrayPressed" format="reference" />
+        <attr name="vh_gradientColorArrayChecked" format="reference" />
+        <attr name="vh_gradientColorArrayUnable" format="reference" />
+
+        <attr name="vh_gradientColorPositionArray" format="reference" />                    <!--渐变颜色数组对应的位置数组，取值为0~1，若为null，颜色沿渐变线均匀分布，最少两个-->
+        <attr name="vh_gradientColorPositionArrayNormal" format="reference" />
+        <attr name="vh_gradientColorPositionArrayPressed" format="reference" />
+        <attr name="vh_gradientColorPositionArrayChecked" format="reference" />
+        <attr name="vh_gradientColorPositionArrayUnable" format="reference" />
+
+        <attr name="vh_gradientType">                                                       <!--渐变类型-->
+            <enum name="linear" value="0" />
+            <enum name="radial" value="1" />
+            <enum name="sweep" value="2" />
+        </attr>
+        <attr name="vh_gradientMode">                                                       <!--渐变模式，仅在 type=linear、radial 时适用-->
+            <enum name="clamp" value="0"/>
+            <enum name="repeat" value="1"/>
+            <enum name="mirror" value="2"/>
+        </attr>
+        <attr name="vh_gradientAngle" format="float"/>                                      <!--渐变旋转角度，仅在 type=sweep、linear 时适用-->
+        <attr name="vh_gradientRadius" format="dimension" />                                <!--渐变半径，仅在 type=radial 时适用-->
+        <attr name="vh_gradientCenterX" format="float" />                                   <!--渐变中心X，比例值范围 0.0 ~ 1.0，仅在 type=linear、radial 时适用-->
+        <attr name="vh_gradientCenterY" format="float" />                                   <!--渐变中心Y，比例值范围 0.0 ~ 1.0，仅在 type=linear、radial 时适用-->
+
+        <!--模糊背景-->
+        <attr name="vh_blurScale" format="float" />                                         <!--模糊图片缩放比例，(0,1]-->
+        <attr name="vh_blurRadius" format="dimension" />
+
+        <!--阴影-->
+        <attr name="vh_shadowColor" format="color" />
+        <attr name="vh_shadowColorNormal" format="color" />
+        <attr name="vh_shadowColorPressed" format="color" />
+        <attr name="vh_shadowColorChecked" format="color" />
+        <attr name="vh_shadowColorUnable" format="color" />
+        <attr name="vh_shadowRadius" format="dimension" />
+        <attr name="vh_shadowRadiusNormal" format="dimension" />
+        <attr name="vh_shadowRadiusPressed" format="dimension" />
+        <attr name="vh_shadowRadiusChecked" format="dimension" />
+        <attr name="vh_shadowRadiusUnable" format="dimension" />
+        <attr name="vh_shadowOffsetX" format="dimension" />
+        <attr name="vh_shadowOffsetXNormal" format="dimension" />
+        <attr name="vh_shadowOffsetXPressed" format="dimension" />
+        <attr name="vh_shadowOffsetXChecked" format="dimension" />
+        <attr name="vh_shadowOffsetXUnable" format="dimension" />
+        <attr name="vh_shadowOffsetY" format="dimension" />
+        <attr name="vh_shadowOffsetYNormal" format="dimension" />
+        <attr name="vh_shadowOffsetYPressed" format="dimension" />
+        <attr name="vh_shadowOffsetYChecked" format="dimension" />
+        <attr name="vh_shadowOffsetYUnable" format="dimension" />
+    </declare-styleable>
+</resources>
