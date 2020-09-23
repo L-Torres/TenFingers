@@ -2244,6 +2244,9 @@ public class MyNetWorker extends HemaNetWorker {
     public void shop_detail(String shopId){
         MyHttpInformation information = MyHttpInformation.SHOP_DETAIL;
         HashMap<String, String> params = new HashMap<>();
+        if(BaseUtil.IsLogin()){
+            params.put("token", MyApplication.getInstance().getUser().getToken());
+        }
         params.put("shopId", shopId);
         MyNetTask task = new CommonNetTask<ShopDetail>(information, params, ShopDetail.class);
         executeTask(task);
