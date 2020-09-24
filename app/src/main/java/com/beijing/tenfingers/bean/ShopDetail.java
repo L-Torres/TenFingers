@@ -78,6 +78,14 @@ public class ShopDetail extends XtomObject implements Serializable {
         return is_collect;
     }
 
+    public void setIs_collect(String is_collect) {
+        this.is_collect = is_collect;
+    }
+
+    public void setCollect_count(String collect_count) {
+        this.collect_count = collect_count;
+    }
+
     public String getId() {
         return id;
     }

@@ -60,4 +60,7 @@
     <color name="cl_e4e4e4">#e4e4e4</color>
     <color name="cl_888888">#888888</color>
     <color name="start">#070e18</color>
+    <color name="colorA">#2D9C84</color>
+    <color name="colorB">#BCF2E7</color>
+
 </resources>

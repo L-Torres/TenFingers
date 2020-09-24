@@ -81,6 +81,9 @@ public class ShopDetailActivity extends BaseActivity implements View.OnClickList
     protected void callBackForServerSuccess(HemaNetTask netTask, HemaBaseResult baseResult) {
         MyHttpInformation information= (MyHttpInformation) netTask.getHttpInformation();
         switch (information){
+            case SHOP_COLLECT_CANCEL:
+                iv_collect.setImageResource(R.mipmap.heart_add);
+                break;
             case SHOP_COLLECT:
                 iv_collect.setImageResource(R.mipmap.heart_added);
 
@@ -311,8 +314,22 @@ public class ShopDetailActivity extends BaseActivity implements View.OnClickList
         Intent it=null;
         switch (v.getId()){
             case R.id.iv_collect:
+                int count=0;
+                if(!isNull(detail.getCollect_count())){
+                    count=Integer.valueOf(detail.getCollect_count());
+                }
                 if(BaseUtil.IsLogin()){
-                    getNetWorker().shop_collect(MyApplication.getInstance().getUser().getToken(),id);
+                    if("1".equals(detail.getIs_collect())){
+                        detail.setIs_collect("0");
+                        detail.setCollect_count(count-1+"");
+                        getNetWorker().shop_collect_cancel(MyApplication.getInstance().getUser().getToken(),id);
+
+                    }else{
+                        detail.setIs_collect("1");
+                        detail.setCollect_count(count+1+"");
+                        getNetWorker().shop_collect(MyApplication.getInstance().getUser().getToken(),id);
+                    }
+                    tv_focus.setText(detail.getCollect_count()+"人关注");
                 }else{
                     BaseUtil.toLogin(mContext,"1");
                 }

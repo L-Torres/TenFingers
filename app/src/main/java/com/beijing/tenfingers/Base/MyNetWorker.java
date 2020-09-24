@@ -1203,6 +1203,17 @@ public class MyNetWorker extends HemaNetWorker {
         executeTask(task);
     }
     /**
+     * 收藏店铺取消
+     */
+    public void shop_collect_cancel(String token, String shopId) {
+        MyHttpInformation information = MyHttpInformation.SHOP_COLLECT_CANCEL;
+        HashMap<String, String> params = new HashMap<>();
+        params.put("token", token);
+        params.put("shopId", shopId);
+        MyNetTask task = new CurrentTask(information, params);
+        executeTask(task);
+    }
+    /**
      * 统一下单
      */
     public void order_prepay(String token,String pid, String sid, String tid,

@@ -12,13 +12,13 @@
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/transparent"
+        app:tabBackground="@drawable/tabitem"
         app:tabMode="fixed"
         android:textSize="15sp"
         app:tabGravity="fill"
         app:tabIndicatorColor="@null"
-        app:tabSelectedTextColor="#FF333333"
-        app:tabTextColor="#FF808080"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="#2D9C84"
         app:tabIndicatorHeight="2dp"/>
 
 

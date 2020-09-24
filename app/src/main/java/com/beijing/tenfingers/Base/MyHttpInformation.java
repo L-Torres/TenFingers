@@ -772,6 +772,10 @@ public enum MyHttpInformation implements HemaHttpInfomation {
      * 店铺收藏
      */
     SHOP_COLLECT(169, "index/shop/shop_collect", "店铺收藏", false),
+    /**
+     * 店铺收藏取消
+     */
+    SHOP_COLLECT_CANCEL(170, "index/shop/shop_collect_cancel", "店铺收藏取消", false),
 
 
     ;

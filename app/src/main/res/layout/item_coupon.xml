@@ -13,10 +13,11 @@
         android:layout_gravity="center_vertical"
         android:orientation="horizontal">
         <FrameLayout
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/dp_100"
             android:layout_height="wrap_content">
             <ImageView
-                android:layout_width="80dp"
+                android:layout_width="match_parent"
+                android:minWidth="80dp"
                 android:layout_height="match_parent"
                 android:src="@mipmap/coupon_bg"
                 android:scaleType="centerCrop"
@@ -44,7 +45,7 @@
                         android:layout_height="wrap_content"
                         android:text="20"
                         android:textColor="#ffffffff"
-                        android:textSize="28sp"
+                        android:textSize="22sp"
                         android:layout_marginLeft="5dp"
                         android:textStyle="bold"/>
                 </LinearLayout>
